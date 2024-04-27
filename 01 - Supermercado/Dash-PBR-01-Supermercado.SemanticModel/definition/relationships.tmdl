@@ -1,0 +1,5 @@
+relationship c38e5733-6aed-49af-bc8f-042cbc96df1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: supermarket_sales.DataFormatada
+	toColumn: LocalDateTable_a41fca3b-6f2a-4128-845f-891399e31af0.Date
+

@@ -1,0 +1,20 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBIDesktopVersion = 2.128.1177.0 (24.04)
+
+annotation PBI_QueryOrder = ["supermarket_sales"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+ref table supermarket_sales
+ref table DateTableTemplate_17468bed-4553-4335-ba45-0acb5059965e
+ref table LocalDateTable_a41fca3b-6f2a-4128-845f-891399e31af0
+
