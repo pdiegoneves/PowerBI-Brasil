@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dash-PBR-01-Supermercado"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f3f6c550-2a66-4f0b-a8e4-176a78fd9ed2"
+  }
+}

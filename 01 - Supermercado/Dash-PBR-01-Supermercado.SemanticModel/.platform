@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Dash-PBR-01-Supermercado"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a89d07d1-ac44-496a-85de-5bafc433a2d4"
+  }
+}
