@@ -1,0 +1,75 @@
+table Medidas
+	lineageTag: 25e8fc91-5234-4ba2-8971-e9549ae6ffc4
+
+	measure '% Variacao Faturamento' = ```
+			
+			    var variacao = DIVIDE([R$ Faturamento], [R$ Faturamento Mes Anterior], 0) - 1
+			    var variacaoFormatada = FORMAT(variacao, "0.00%")
+			RETURN
+			    IF(variacao < 0, "🔴 ", "🟢 ") & variacaoFormatada
+			```
+		displayFolder: F_Vendas
+		lineageTag: e07e610e-9dac-4096-9761-63addf0496b3
+
+	measure '% Variacao Lucro Liquido' = ```
+			
+			    var variacao =     DIVIDE([R$ Lucro Liquido], [R$ Lucro Liquido Mes Anterior], 0) - 1
+			    var variacaoFormatada = FORMAT(variacao, "0.00%")
+			RETURN
+			    IF(variacao < 0, "🔴 ", "🟢 ") & variacaoFormatada
+			
+			```
+		displayFolder: F_Vendas
+		lineageTag: 98ed86a6-ecdb-4089-94d6-b19803e1c1c3
+
+	measure 'R$ Faturamento Mes Anterior' = ```
+			
+			    CALCULATE(
+			        [R$ Faturamento],
+			        PREVIOUSMONTH(D_Calendario[Date])
+			    )  
+			```
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: F_Vendas
+		lineageTag: c23305a4-81e4-4773-bc90-cc70fe1bc526
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'R$ Faturamento' = COALESCE(SUM(F_Vendas[Total]), 0)
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: F_Vendas
+		lineageTag: f985698c-5689-4f8c-acc2-c221bb11435b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'R$ Lucro Liquido' = SUM(F_Vendas[Lucro Liquido]) + 0
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: F_Vendas
+		lineageTag: 7c0b7c81-bc0b-4dfb-97f0-eb5a2954989b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'R$ Lucro Liquido Mes Anterior' = ```
+			
+			    CALCULATE(
+			        [R$ Lucro Liquido],
+			        PREVIOUSMONTH(D_Calendario[Date])
+			    )  
+			```
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: F_Vendas
+		lineageTag: f570db80-df70-43f1-8fbd-9578b33861c6
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Fonte,{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

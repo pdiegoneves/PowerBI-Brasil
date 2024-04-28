@@ -12,7 +12,7 @@ table D_Calendario
 
 		variation Variation
 			isDefault
-			relationship: a42ff2d0-1281-4c8d-8d41-911d4711c96b
+			relationship: 2a6295c0-7d72-46ec-a51a-7bf80d6b5482
 			defaultHierarchy: LocalDateTable_ddee7349-c840-4957-a04e-c73edc640b46.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
@@ -80,6 +80,16 @@ table D_Calendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column Dia
+		dataType: string
+		lineageTag: cba5d088-237a-4103-a6eb-06d68df10e41
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
 	partition D_Calendario = calculated
 		mode: import
 		source = ```
@@ -92,6 +102,7 @@ table D_Calendario
 				        ,"Mes_Sigla", FORMAT([Date], "MMM")
 				        ,"Mes/Ano", FORMAT([Date], "MMM/YYYY")
 				        ,"INDICE_AnoMes", FORMAT([Date], "YYYYMM")
+				        ,"Dia", FORMAT([Date], "DD")
 				    )
 				```
 

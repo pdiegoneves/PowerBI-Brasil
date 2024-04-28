@@ -1,4 +1,4 @@
-relationship a42ff2d0-1281-4c8d-8d41-911d4711c96b
+relationship 2a6295c0-7d72-46ec-a51a-7bf80d6b5482
 	joinOnDateBehavior: datePartOnly
 	fromColumn: D_Calendario.Date
 	toColumn: LocalDateTable_ddee7349-c840-4957-a04e-c73edc640b46.Date

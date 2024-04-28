@@ -16,7 +16,7 @@ annotation PBI_ProTooling = ["DevMode","CalcGroup"]
 
 annotation PBIDesktopVersion = 2.128.1177.0 (24.04)
 
-annotation PBI_QueryOrder = ["F_Vendas","Erros em F_Vendas"]
+annotation PBI_QueryOrder = ["F_Vendas","Erros em F_Vendas","Medidas"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -24,4 +24,5 @@ ref table F_Vendas
 ref table DateTableTemplate_17468bed-4553-4335-ba45-0acb5059965e
 ref table D_Calendario
 ref table LocalDateTable_ddee7349-c840-4957-a04e-c73edc640b46
+ref table Medidas
 
