@@ -1,0 +1,99 @@
+table D_Calendario
+	lineageTag: 36e32e6e-7869-47bb-9e03-3da73bf9781d
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0ebc7c89-0496-47a0-94c8-abb91b3ce977
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: a42ff2d0-1281-4c8d-8d41-911d4711c96b
+			defaultHierarchy: LocalDateTable_ddee7349-c840-4957-a04e-c73edc640b46.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		dataType: string
+		lineageTag: 89e6e18d-b21b-4c40-a8dd-7a423bb23a66
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: 788f7b29-bd21-41f3-b47b-ddfeab251d03
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Nome
+		dataType: string
+		lineageTag: 7aab51d1-60f3-4b9d-9723-5074f381b994
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Mes_Nome]
+		sortByColumn: INDICE_AnoMes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes_Sigla
+		dataType: string
+		lineageTag: 90d2d429-0542-41a4-a750-07d26bdbb4e3
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Mes_Sigla]
+		sortByColumn: INDICE_AnoMes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes/Ano
+		dataType: string
+		lineageTag: 5290e127-a644-47aa-b2b0-281f43c19e93
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Mes/Ano]
+		sortByColumn: INDICE_AnoMes
+
+		annotation SummarizationSetBy = Automatic
+
+	column INDICE_AnoMes
+		dataType: string
+		lineageTag: bcc36d70-955a-4964-8ba1-c415243e82c2
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [INDICE_AnoMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition D_Calendario = calculated
+		mode: import
+		source = ```
+				
+				    ADDCOLUMNS(
+				        CALENDAR(MIN(F_Vendas[DataFormatada]),MAX(F_Vendas[DataFormatada]))
+				        ,"Ano", FORMAT([Date], "YYYY")
+				        ,"Mes", FORMAT([Date], "MM")
+				        ,"Mes_Nome", FORMAT([Date], "MMMM")
+				        ,"Mes_Sigla", FORMAT([Date], "MMM")
+				        ,"Mes/Ano", FORMAT([Date], "MMM/YYYY")
+				        ,"INDICE_AnoMes", FORMAT([Date], "YYYYMM")
+				    )
+				```
+
+	annotation PBI_Id = 42c8650af2844ecbb271fac2a791ca54
+

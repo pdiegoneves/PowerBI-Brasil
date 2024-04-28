@@ -1,20 +1,27 @@
 model Model
 	culture: pt-BR
 	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
 	sourceQueryCulture: pt-BR
 	dataAccessOptions
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_ProTooling = ["DevMode"]
+/// Erros nas consultas que foram carregadas em 27/04/2024 18:24:39.
+queryGroup 'Erros na Consulta - 27/04/2024 18:24:39'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_ProTooling = ["DevMode","CalcGroup"]
 
 annotation PBIDesktopVersion = 2.128.1177.0 (24.04)
 
-annotation PBI_QueryOrder = ["supermarket_sales"]
+annotation PBI_QueryOrder = ["F_Vendas","Erros em F_Vendas"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-ref table supermarket_sales
+ref table F_Vendas
 ref table DateTableTemplate_17468bed-4553-4335-ba45-0acb5059965e
-ref table LocalDateTable_a41fca3b-6f2a-4128-845f-891399e31af0
+ref table D_Calendario
+ref table LocalDateTable_ddee7349-c840-4957-a04e-c73edc640b46
 

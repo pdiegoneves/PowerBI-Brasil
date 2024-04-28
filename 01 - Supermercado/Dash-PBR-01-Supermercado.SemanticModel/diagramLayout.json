@@ -10,16 +10,28 @@
       "nodes": [
         {
           "location": {
+            "x": 379,
+            "y": 0
+          },
+          "nodeIndex": "D_Calendario",
+          "nodeLineageTag": "36e32e6e-7869-47bb-9e03-3da73bf9781d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
             "x": 0,
             "y": 0
           },
-          "nodeIndex": "supermarket_sales",
-          "nodeLineageTag": "85d7c4ec-ba6f-40ba-b0e6-14b74d0db17b",
+          "nodeIndex": "F_Vendas",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         }
       ],
       "name": "Todas as tabelas",

@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.53\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":0,\"settings\":{\"isPersistentUserStateDisabled\":true,\"hideVisualContainerHeader\":false,\"useStylableVisualContainerHeader\":false,\"exportDataMode\":2,\"useNewFilterPaneExperience\":false,\"optOutNewFilterPaneExperience\":false,\"defaultFilterActionIsDataFilter\":false,\"useCrossReportDrillthrough\":false,\"allowChangeFilterTypes\":true,\"allowInlineExploration\":false,\"disableFilterPaneSearch\":false,\"enableDeveloperMode\":false,\"useEnhancedTooltips\":false,\"useScaledTooltips\":true,\"useDefaultAggregateDisplayName\":true,\"queryLimitOption\":0,\"customMemoryLimit\":\"1048576\",\"customTimeoutLimit\":\"225\"},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"isPersistentUserStateDisabled\":false,\"hideVisualContainerHeader\":false,\"useStylableVisualContainerHeader\":false,\"exportDataMode\":0,\"useNewFilterPaneExperience\":false,\"optOutNewFilterPaneExperience\":false,\"defaultFilterActionIsDataFilter\":true,\"useCrossReportDrillthrough\":false,\"allowChangeFilterTypes\":true,\"allowInlineExploration\":false,\"disableFilterPaneSearch\":false,\"enableDeveloperMode\":false,\"useEnhancedTooltips\":false,\"useScaledTooltips\":false,\"useDefaultAggregateDisplayName\":true,\"queryLimitOption\":0,\"customMemoryLimit\":\"1048576\",\"customTimeoutLimit\":\"225\"},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -15,11 +15,25 @@
         "name": "SharedResources",
         "type": 2
       }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Faturamento7611419828797086.svg",
+            "path": "Faturamento7611419828797086.svg",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
     }
   ],
   "sections": [
     {
-      "config": "{}",
+      "config": "{\"relationships\":[{\"source\":\"b779d09893bcb91e28e9\",\"target\":\"17e1ae9715aa8097095d\",\"type\":3}],\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Faturamento.svg'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Faturamento7611419828797086.svg\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
       "displayName": "Página 1",
       "displayOption": 1,
       "filters": "[]",
@@ -27,22 +41,67 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"c4ff923b689e9166dad6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11,\"y\":348,\"width\":788,\"height\":338,\"z\":1,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"supermarket_sales.R$ Total\"}],\"Category\":[{\"queryRef\":\"supermarket_sales.City\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"supermarket_sales\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"R$ Total\"},\"Name\":\"supermarket_sales.R$ Total\",\"NativeReferenceName\":\"R$ Total\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"City\"},\"Name\":\"supermarket_sales.City\",\"NativeReferenceName\":\"City\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"R$ Total\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 338.00,
-          "width": 788.00,
-          "x": 11.00,
-          "y": 348.00,
-          "z": 1.00
+          "config": "{\"name\":\"17e1ae9715aa8097095d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":197.54330708661416,\"y\":183.43307086614172,\"z\":0,\"width\":576.503937007874,\"height\":251.96850393700788,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"D_Calendario.Mes/Ano\",\"active\":true}],\"Y\":[{\"queryRef\":\"F_Vendas.R$ Faturamento\"},{\"queryRef\":\"F_Vendas.R$ Lucro Liquido\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"D_Calendario\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Mes/Ano\"},\"Name\":\"D_Calendario.Mes/Ano\",\"NativeReferenceName\":\"Mes/Ano\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"},\"Name\":\"F_Vendas.R$ Faturamento\",\"NativeReferenceName\":\"R$ Faturamento\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"},\"Name\":\"F_Vendas.R$ Lucro Liquido\",\"NativeReferenceName\":\"R$ Lucro Liquido\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"F_Vendas\"}},\"Property\":\"R$ Faturamento\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"}},\"Right\":{\"Literal\":{\"Value\":\"0M\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 251.97,
+          "width": 576.50,
+          "x": 197.54,
+          "y": 183.43,
+          "z": 0.00
         },
         {
-          "config": "{\"name\":\"ccb7596440fea2ed8afd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.726256983240225,\"y\":0,\"z\":0,\"width\":788.3798882681565,\"height\":337.8770949720671,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"supermarket_sales.R$ Total\"}],\"Category\":[{\"queryRef\":\"supermarket_sales.DataFormatada\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"supermarket_sales\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"R$ Total\"},\"Name\":\"supermarket_sales.R$ Total\",\"NativeReferenceName\":\"R$ Total\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"DataFormatada\"},\"Name\":\"supermarket_sales.DataFormatada\",\"NativeReferenceName\":\"DataFormatada\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"DataFormatada\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}},\"interpolationSmooth\":{\"expr\":{\"Literal\":{\"Value\":\"'monotoneX'\"}}},\"strokeTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"areaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}],\"referenceLine\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Max'\"}}},\"value\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"SelectRef\":{\"ExpressionName\":\"supermarket_sales.R$ Total\"}},\"Function\":4}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#10FF10'\"}}}}}},\"selector\":{\"metadata\":\"supermarket_sales.R$ Total\",\"id\":\"1\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Media'\"}}},\"value\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"SelectRef\":{\"ExpressionName\":\"supermarket_sales.R$ Total\"}},\"Function\":1}}}},\"selector\":{\"metadata\":\"supermarket_sales.R$ Total\",\"id\":\"2\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Mediana'\"}}},\"value\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"SelectRef\":{\"ExpressionName\":\"supermarket_sales.R$ Total\"}},\"Function\":6}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'dotted'\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0.2}}}}}},\"selector\":{\"metadata\":\"supermarket_sales.R$ Total\",\"id\":\"3\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"24feea2190205212a2ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":843,\"y\":81,\"z\":5000,\"width\":319.5,\"height\":183,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"F_Vendas.R$ Lucro Liquido\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"},\"Name\":\"F_Vendas.R$ Lucro Liquido\",\"NativeReferenceName\":\"R$ Lucro Liquido\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}},\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 337.88,
-          "width": 788.38,
-          "x": 10.73,
+          "height": 183.00,
+          "width": 319.50,
+          "x": 843.00,
+          "y": 81.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"7a586602efa99fa61585\",\"layouts\":[{\"id\":0,\"position\":{\"x\":198.3050847457627,\"y\":457.6271186440678,\"z\":2000,\"width\":520.1694915254237,\"height\":262.3728813559322,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"F_Vendas.R$ Lucro Liquido\"}],\"Category\":[{\"queryRef\":\"F_Vendas.Customer type\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"},\"Name\":\"F_Vendas.R$ Lucro Liquido\",\"NativeReferenceName\":\"R$ Lucro Liquido\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Customer type\"},\"Name\":\"F_Vendas.Customer type\",\"NativeReferenceName\":\"Customer type\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Category, data value, percent of total'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 262.37,
+          "width": 520.17,
+          "x": 198.31,
+          "y": 457.63,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7e1cbdb0d1e220659bc6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":304.37795275590554,\"y\":0,\"z\":4000,\"width\":304.37795275590554,\"height\":183.43307086614172,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"F_Vendas.R$ Faturamento\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"},\"Name\":\"F_Vendas.R$ Faturamento\",\"NativeReferenceName\":\"R$ Faturamento\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 183.43,
+          "width": 304.38,
+          "x": 304.38,
           "y": 0.00,
-          "z": 0.00
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"91d2ccbb1001eae49bec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":790.1694915254237,\"y\":199.83050847457628,\"z\":1000,\"width\":471.35593220338984,\"height\":257.79661016949154,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"F_Vendas.Branch\",\"active\":true}],\"Y\":[{\"queryRef\":\"F_Vendas.R$ Faturamento\"},{\"queryRef\":\"F_Vendas.R$ Lucro Liquido\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Branch\"},\"Name\":\"F_Vendas.Branch\",\"NativeReferenceName\":\"Branch\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"},\"Name\":\"F_Vendas.R$ Faturamento\",\"NativeReferenceName\":\"R$ Faturamento\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"},\"Name\":\"F_Vendas.R$ Lucro Liquido\",\"NativeReferenceName\":\"R$ Lucro Liquido\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"referenceLine\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Med Fat'\"}}},\"value\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"SelectRef\":{\"ExpressionName\":\"F_Vendas.R$ Faturamento\"}},\"Function\":1}}}},\"selector\":{\"metadata\":\"F_Vendas.R$ Faturamento\",\"id\":\"1\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Med LQ'\"}}},\"value\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"SelectRef\":{\"ExpressionName\":\"F_Vendas.R$ Lucro Liquido\"}},\"Function\":1}}}},\"selector\":{\"metadata\":\"F_Vendas.R$ Lucro Liquido\",\"id\":\"2\"}}]}}}",
+          "filters": "[]",
+          "height": 257.80,
+          "width": 471.36,
+          "x": 790.17,
+          "y": 199.83,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"b0b9941f516035addd5c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":773.3898305084746,\"y\":468.3050847457627,\"z\":3000,\"width\":506.4406779661017,\"height\":251.6949152542373,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"F_Vendas.Payment\",\"active\":true}],\"Y\":[{\"queryRef\":\"F_Vendas.R$ Faturamento\"},{\"queryRef\":\"F_Vendas.R$ Lucro Liquido\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Payment\"},\"Name\":\"F_Vendas.Payment\",\"NativeReferenceName\":\"Payment\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"},\"Name\":\"F_Vendas.R$ Faturamento\",\"NativeReferenceName\":\"R$ Faturamento\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Lucro Liquido\"},\"Name\":\"F_Vendas.R$ Lucro Liquido\",\"NativeReferenceName\":\"R$ Lucro Liquido\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 251.69,
+          "width": 506.44,
+          "x": 773.39,
+          "y": 468.31,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b779d09893bcb91e28e9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":25.5,\"y\":81,\"z\":6000,\"width\":298.5,\"height\":42,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"D_Calendario.Ano\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"D_Calendario\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Ano\"},\"Name\":\"D_Calendario.Ano\",\"NativeReferenceName\":\"Ano\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter9ea29524f21e3ce4bcab\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"F_Vendas\"}},\"Property\":\"R$ Faturamento\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_Vendas\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"R$ Faturamento\"}},\"Right\":{\"Literal\":{\"Value\":\"0M\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 42.00,
+          "width": 298.50,
+          "x": 25.50,
+          "y": 81.00,
+          "z": 6000.00
         }
       ],
       "width": 1280.00
