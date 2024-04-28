@@ -154,6 +154,23 @@ table F_Vendas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	column 'Faixa de Rating' = ```
+			
+			    SWITCH(TRUE()
+			        ,AND([Rating] >= 0, [Rating] <= 19), "Muito Insatisfeito"
+			        ,AND([Rating] >= 20, [Rating] <= 39), "Insatisfeito"
+			        ,AND([Rating] >= 40, [Rating] <= 59), "Neutro"
+			        ,AND([Rating] >= 60, [Rating] <= 79), "Satisfeito"
+			        ,AND([Rating] >= 80, [Rating] <= 100), "Muito Satisfeito"
+			    )
+			```
+		dataType: string
+		lineageTag: 2895afd5-66ff-4cba-a062-d24fb789a640
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
 	partition F_Vendas = m
 		mode: import
 		source =

@@ -62,6 +62,30 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	measure 'Quantidade de Vendas' = COUNTROWS(F_Vendas)
+		formatString: 0
+		displayFolder: F_Vendas
+		lineageTag: e501d3c5-8711-4479-ae28-645215dd59af
+
+	measure 'Media de Rating' = AVERAGE(F_Vendas[Rating])
+		displayFolder: F_Vendas
+		lineageTag: 3db11c4d-de72-4d23-9446-9dff0c4cce7d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mediana de Rating' = MEDIAN(F_Vendas[Rating])
+		displayFolder: F_Vendas
+		lineageTag: 78c478b9-6caf-4aa2-819b-4ef9ee268157
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'R$ Custos' = SUM(F_Vendas[cogs]) + 0
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: F_Vendas
+		lineageTag: 471529c2-befe-4de8-8c64-f2f97c4324a8
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	partition Medidas = m
 		mode: import
 		source =
